@@ -1,6 +1,6 @@
-package com.ash7sha.jhipster.application.security.jwt;
+package com.ash7sha.Ash7sha.application.security.jwt;
 
-import io.github.jhipster.config.JHipsterProperties;
+import io.github.Ash7sha.config.Ash7shaProperties;
 
 import java.nio.charset.StandardCharsets;
 import java.util.*;
@@ -33,21 +33,21 @@ public class TokenProvider {
 
     private long tokenValidityInMillisecondsForRememberMe;
 
-    private final JHipsterProperties jHipsterProperties;
+    private final Ash7shaProperties Ash7shaProperties;
 
-    public TokenProvider(JHipsterProperties jHipsterProperties) {
-        this.jHipsterProperties = jHipsterProperties;
+    public TokenProvider(Ash7shaProperties Ash7shaProperties) {
+        this.Ash7shaProperties = Ash7shaProperties;
     }
 
     @PostConstruct
     public void init() {
-        this.secretKey = encoder.encodeToString(jHipsterProperties.getSecurity().getAuthentication().getJwt()
+        this.secretKey = encoder.encodeToString(Ash7shaProperties.getSecurity().getAuthentication().getJwt()
             .getSecret().getBytes(StandardCharsets.UTF_8));
 
         this.tokenValidityInMilliseconds =
-            1000 * jHipsterProperties.getSecurity().getAuthentication().getJwt().getTokenValidityInSeconds();
+            1000 * Ash7shaProperties.getSecurity().getAuthentication().getJwt().getTokenValidityInSeconds();
         this.tokenValidityInMillisecondsForRememberMe =
-            1000 * jHipsterProperties.getSecurity().getAuthentication().getJwt()
+            1000 * Ash7shaProperties.getSecurity().getAuthentication().getJwt()
                 .getTokenValidityInSecondsForRememberMe();
     }
 

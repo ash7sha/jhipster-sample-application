@@ -1,4 +1,4 @@
-package com.ash7sha.jhipster.application.config;
+package com.ash7sha.Ash7sha.application.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;

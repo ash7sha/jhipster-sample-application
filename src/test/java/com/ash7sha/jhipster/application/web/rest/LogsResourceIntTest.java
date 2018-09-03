@@ -1,7 +1,7 @@
-package com.ash7sha.jhipster.application.web.rest;
+package com.ash7sha.Ash7sha.application.web.rest;
 
-import com.ash7sha.jhipster.application.JhipsterSampleApplicationApp;
-import com.ash7sha.jhipster.application.web.rest.vm.LoggerVM;
+import com.ash7sha.Ash7sha.application.Ash7shaSampleApplicationApp;
+import com.ash7sha.Ash7sha.application.web.rest.vm.LoggerVM;
 import ch.qos.logback.classic.AsyncAppender;
 import ch.qos.logback.classic.LoggerContext;
 import org.junit.Before;
@@ -27,7 +27,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see LogsResource
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = JhipsterSampleApplicationApp.class)
+@SpringBootTest(classes = Ash7shaSampleApplicationApp.class)
 public class LogsResourceIntTest {
 
     private MockMvc restLogsMockMvc;

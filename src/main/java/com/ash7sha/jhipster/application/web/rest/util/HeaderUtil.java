@@ -1,4 +1,4 @@
-package com.ash7sha.jhipster.application.web.rest.util;
+package com.ash7sha.Ash7sha.application.web.rest.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +11,7 @@ public final class HeaderUtil {
 
     private static final Logger log = LoggerFactory.getLogger(HeaderUtil.class);
 
-    private static final String APPLICATION_NAME = "jhipsterSampleApplicationApp";
+    private static final String APPLICATION_NAME = "Ash7shaSampleApplicationApp";
 
     private HeaderUtil() {
     }

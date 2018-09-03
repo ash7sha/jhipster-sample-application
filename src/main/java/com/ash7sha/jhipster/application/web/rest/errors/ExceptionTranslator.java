@@ -1,6 +1,6 @@
-package com.ash7sha.jhipster.application.web.rest.errors;
+package com.ash7sha.Ash7sha.application.web.rest.errors;
 
-import com.ash7sha.jhipster.application.web.rest.util.HeaderUtil;
+import com.ash7sha.Ash7sha.application.web.rest.util.HeaderUtil;
 
 import org.springframework.dao.ConcurrencyFailureException;
 import org.springframework.http.ResponseEntity;

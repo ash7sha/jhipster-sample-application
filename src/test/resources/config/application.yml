@@ -3,8 +3,8 @@
 #
 # This configuration is used for unit/integration tests.
 #
-# More information on profiles: https://www.jhipster.tech/profiles/
-# More information on configuration properties: https://www.jhipster.tech/common-application-properties/
+# More information on profiles: https://www.Ash7sha.tech/profiles/
+# More information on configuration properties: https://www.Ash7sha.tech/common-application-properties/
 # ===================================================================
 
 # ===================================================================
@@ -17,12 +17,12 @@ eureka:
     client:
         enabled: false
     instance:
-        appname: jhipsterSampleApplication
-        instanceId: jhipsterSampleApplication:${spring.application.instance-id:${random.value}}
+        appname: Ash7shaSampleApplication
+        instanceId: Ash7shaSampleApplication:${spring.application.instance-id:${random.value}}
 
 spring:
     application:
-        name: jhipsterSampleApplication
+        name: Ash7shaSampleApplication
     cache:
         type: simple
     cloud:
@@ -33,15 +33,15 @@ spring:
                     zk-nodes: localhost
             bindings:
                 output:
-                    destination: topic-jhipster
+                    destination: topic-Ash7sha
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:h2:mem:jhipsterSampleApplication;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+        url: jdbc:h2:mem:Ash7shaSampleApplication;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
         name:
         username:
         password:
     jpa:
-        database-platform: io.github.jhipster.domain.util.FixedH2Dialect
+        database-platform: io.github.Ash7sha.domain.util.FixedH2Dialect
         database: H2
         open-in-view: false
         show-sql: false
@@ -78,12 +78,12 @@ info:
         version: #project.version#
 
 # ===================================================================
-# JHipster specific properties
+# Ash7sha specific properties
 #
-# Full reference is available at: https://www.jhipster.tech/common-application-properties/
+# Full reference is available at: https://www.Ash7sha.tech/common-application-properties/
 # ===================================================================
 
-jhipster:
+Ash7sha:
     async:
         core-pool-size: 1
         max-pool-size: 50
@@ -110,10 +110,10 @@ jhipster:
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class
-# to have type-safe configuration, like in the JHipsterProperties above
+# to have type-safe configuration, like in the Ash7shaProperties above
 #
 # More documentation is available at:
-# https://www.jhipster.tech/common-application-properties/
+# https://www.Ash7sha.tech/common-application-properties/
 # ===================================================================
 
 # application:

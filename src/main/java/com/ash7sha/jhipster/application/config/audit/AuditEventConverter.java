@@ -1,6 +1,6 @@
-package com.ash7sha.jhipster.application.config.audit;
+package com.ash7sha.Ash7sha.application.config.audit;
 
-import com.ash7sha.jhipster.application.domain.PersistentAuditEvent;
+import com.ash7sha.Ash7sha.application.domain.PersistentAuditEvent;
 
 import org.springframework.boot.actuate.audit.AuditEvent;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;

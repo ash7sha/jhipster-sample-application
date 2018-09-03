@@ -1,10 +1,10 @@
-package com.ash7sha.jhipster.application.config;
+package com.ash7sha.Ash7sha.application.config;
 
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.servlet.InstrumentedFilter;
 import com.codahale.metrics.servlets.MetricsServlet;
-import io.github.jhipster.config.JHipsterConstants;
-import io.github.jhipster.config.JHipsterProperties;
+import io.github.Ash7sha.config.Ash7shaConstants;
+import io.github.Ash7sha.config.Ash7shaProperties;
 import io.undertow.Undertow;
 import io.undertow.Undertow.Builder;
 import io.undertow.UndertowOptions;
@@ -45,7 +45,7 @@ public class WebConfigurerTest {
 
     private MockEnvironment env;
 
-    private JHipsterProperties props;
+    private Ash7shaProperties props;
 
     private MetricRegistry metricRegistry;
 
@@ -58,7 +58,7 @@ public class WebConfigurerTest {
             .when(servletContext).addServlet(anyString(), any(Servlet.class));
 
         env = new MockEnvironment();
-        props = new JHipsterProperties();
+        props = new Ash7shaProperties();
 
         webConfigurer = new WebConfigurer(env, props);
         metricRegistry = new MetricRegistry();
@@ -67,7 +67,7 @@ public class WebConfigurerTest {
 
     @Test
     public void testStartUpProdServletContext() throws ServletException {
-        env.setActiveProfiles(JHipsterConstants.SPRING_PROFILE_PRODUCTION);
+        env.setActiveProfiles(Ash7shaConstants.SPRING_PROFILE_PRODUCTION);
         webConfigurer.onStartup(servletContext);
 
         assertThat(servletContext.getAttribute(InstrumentedFilter.REGISTRY_ATTRIBUTE)).isEqualTo(metricRegistry);
@@ -78,7 +78,7 @@ public class WebConfigurerTest {
 
     @Test
     public void testStartUpDevServletContext() throws ServletException {
-        env.setActiveProfiles(JHipsterConstants.SPRING_PROFILE_DEVELOPMENT);
+        env.setActiveProfiles(Ash7shaConstants.SPRING_PROFILE_DEVELOPMENT);
         webConfigurer.onStartup(servletContext);
 
         assertThat(servletContext.getAttribute(InstrumentedFilter.REGISTRY_ATTRIBUTE)).isEqualTo(metricRegistry);
@@ -89,7 +89,7 @@ public class WebConfigurerTest {
 
     @Test
     public void testCustomizeServletContainer() {
-        env.setActiveProfiles(JHipsterConstants.SPRING_PROFILE_PRODUCTION);
+        env.setActiveProfiles(Ash7shaConstants.SPRING_PROFILE_PRODUCTION);
         UndertowServletWebServerFactory container = new UndertowServletWebServerFactory();
         webConfigurer.customize(container);
         assertThat(container.getMimeMappings().get("abs")).isEqualTo("audio/x-mpeg");
@@ -104,7 +104,7 @@ public class WebConfigurerTest {
 
     @Test
     public void testUndertowHttp2Enabled() {
-        props.getHttp().setVersion(JHipsterProperties.Http.Version.V_2_0);
+        props.getHttp().setVersion(Ash7shaProperties.Http.Version.V_2_0);
         UndertowServletWebServerFactory container = new UndertowServletWebServerFactory();
         webConfigurer.customize(container);
         Builder builder = Undertow.builder();

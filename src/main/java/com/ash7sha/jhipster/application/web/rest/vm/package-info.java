@@ -1,4 +1,4 @@
 /**
  * View Models used by Spring MVC REST controllers.
  */
-package com.ash7sha.jhipster.application.web.rest.vm;
+package com.ash7sha.Ash7sha.application.web.rest.vm;

@@ -1,6 +1,6 @@
-package com.ash7sha.jhipster.application;
+package com.ash7sha.Ash7sha.application;
 
-import com.ash7sha.jhipster.application.config.DefaultProfileUtil;
+import com.ash7sha.Ash7sha.application.config.DefaultProfileUtil;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
@@ -16,6 +16,6 @@ public class ApplicationWebXml extends SpringBootServletInitializer {
          * set a default to use when no profile is configured.
          */
         DefaultProfileUtil.addDefaultProfile(application.application());
-        return application.sources(JhipsterSampleApplicationApp.class);
+        return application.sources(Ash7shaSampleApplicationApp.class);
     }
 }

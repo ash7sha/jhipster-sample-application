@@ -1,7 +1,7 @@
-package com.ash7sha.jhipster.application.config;
+package com.ash7sha.Ash7sha.application.config;
 
-import io.github.jhipster.config.JHipsterConstants;
-import io.github.jhipster.config.JHipsterProperties;
+import io.github.Ash7sha.config.Ash7shaConstants;
+import io.github.Ash7sha.config.Ash7shaProperties;
 
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.servlet.InstrumentedFilter;
@@ -37,14 +37,14 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
 
     private final Environment env;
 
-    private final JHipsterProperties jHipsterProperties;
+    private final Ash7shaProperties Ash7shaProperties;
 
     private MetricRegistry metricRegistry;
 
-    public WebConfigurer(Environment env, JHipsterProperties jHipsterProperties) {
+    public WebConfigurer(Environment env, Ash7shaProperties Ash7shaProperties) {
 
         this.env = env;
-        this.jHipsterProperties = jHipsterProperties;
+        this.Ash7shaProperties = Ash7shaProperties;
     }
 
     @Override
@@ -67,10 +67,10 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
         /*
          * Enable HTTP/2 for Undertow - https://twitter.com/ankinson/status/829256167700492288
          * HTTP/2 requires HTTPS, so HTTP requests will fallback to HTTP/1.1.
-         * See the JHipsterProperties class and your application-*.yml configuration files
+         * See the Ash7shaProperties class and your application-*.yml configuration files
          * for more information.
          */
-        if (jHipsterProperties.getHttp().getVersion().equals(JHipsterProperties.Http.Version.V_2_0) &&
+        if (Ash7shaProperties.getHttp().getVersion().equals(Ash7shaProperties.Http.Version.V_2_0) &&
             server instanceof UndertowServletWebServerFactory) {
 
             ((UndertowServletWebServerFactory) server)
@@ -82,7 +82,7 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
     private void setMimeMappings(WebServerFactory server) {
         if (server instanceof ConfigurableServletWebServerFactory) {
             MimeMappings mappings = new MimeMappings(MimeMappings.DEFAULT);
-            // IE issue, see https://github.com/jhipster/generator-jhipster/pull/711
+            // IE issue, see https://github.com/Ash7sha/generator-Ash7sha/pull/711
             mappings.add("html", MediaType.TEXT_HTML_VALUE + ";charset=" + StandardCharsets.UTF_8.name().toLowerCase());
             // CloudFoundry issue, see https://github.com/cloudfoundry/gorouter/issues/64
             mappings.add("json", MediaType.TEXT_HTML_VALUE + ";charset=" + StandardCharsets.UTF_8.name().toLowerCase());
@@ -120,7 +120,7 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
     @Bean
     public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        CorsConfiguration config = jHipsterProperties.getCors();
+        CorsConfiguration config = Ash7shaProperties.getCors();
         if (config.getAllowedOrigins() != null && !config.getAllowedOrigins().isEmpty()) {
             log.debug("Registering CORS filter");
             source.registerCorsConfiguration("/api/**", config);

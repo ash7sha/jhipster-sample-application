@@ -1,4 +1,4 @@
 /**
  * Spring Data JPA repositories.
  */
-package com.ash7sha.jhipster.application.repository;
+package com.ash7sha.Ash7sha.application.repository;

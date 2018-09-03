@@ -1,4 +1,4 @@
-package com.ash7sha.jhipster.application.domain;
+package com.ash7sha.Ash7sha.application.domain;
 
 import java.io.Serializable;
 

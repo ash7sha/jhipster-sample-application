@@ -1,9 +1,9 @@
 # Common configuration shared between all applications
 configserver:
-    name: Docker JHipster Registry
-    status: Connected to the JHipster Registry running in Docker
+    name: Docker Ash7sha Registry
+    status: Connected to the Ash7sha Registry running in Docker
 
-jhipster:
+Ash7sha:
     security:
         authentication:
             jwt:
@@ -12,4 +12,4 @@ jhipster:
 eureka:
     client:
         service-url:
-            defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
+            defaultZone: http://admin:${Ash7sha.registry.password}@localhost:8761/eureka/

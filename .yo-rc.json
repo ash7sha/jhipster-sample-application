@@ -1,10 +1,10 @@
 {
-  "generator-jhipster": {
+  "generator-Ash7sha": {
     "applicationType": "microservice",
     "gitCompany": "",
-    "baseName": "jhipsterSampleApplication",
-    "packageName": "com.ash7sha.jhipster.application",
-    "packageFolder": "com/ash7sha/jhipster/application",
+    "baseName": "Ash7shaSampleApplication",
+    "packageName": "com.ash7sha.Ash7sha.application",
+    "packageFolder": "com/ash7sha/Ash7sha/application",
     "serverPort": 8081,
     "serviceDiscoveryType": "eureka",
     "authenticationType": "jwt",
@@ -33,5 +33,5 @@
   },
   "git-provider": "GitHub",
   "git-company": "ash7sha",
-  "repository-name": "jhipster-sample-application"
+  "repository-name": "Ash7sha-sample-application"
 }

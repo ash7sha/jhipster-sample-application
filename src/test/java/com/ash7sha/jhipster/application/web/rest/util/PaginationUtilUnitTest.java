@@ -1,4 +1,4 @@
-package com.ash7sha.jhipster.application.web.rest.util;
+package com.ash7sha.Ash7sha.application.web.rest.util;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

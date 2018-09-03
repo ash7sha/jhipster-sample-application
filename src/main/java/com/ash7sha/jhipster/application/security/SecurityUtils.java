@@ -1,4 +1,4 @@
-package com.ash7sha.jhipster.application.security;
+package com.ash7sha.Ash7sha.application.security;
 
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;

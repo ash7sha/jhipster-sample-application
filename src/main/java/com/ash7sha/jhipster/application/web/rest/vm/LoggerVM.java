@@ -1,4 +1,4 @@
-package com.ash7sha.jhipster.application.web.rest.vm;
+package com.ash7sha.Ash7sha.application.web.rest.vm;
 
 import ch.qos.logback.classic.Logger;
 

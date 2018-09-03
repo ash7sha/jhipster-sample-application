@@ -1,6 +1,6 @@
-package com.ash7sha.jhipster.application.web.rest;
+package com.ash7sha.Ash7sha.application.web.rest;
 
-import com.ash7sha.jhipster.application.web.rest.vm.LoggerVM;
+import com.ash7sha.Ash7sha.application.web.rest.vm.LoggerVM;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.LoggerContext;

@@ -1,6 +1,6 @@
-package com.ash7sha.jhipster.application.web.rest.errors;
+package com.ash7sha.Ash7sha.application.web.rest.errors;
 
-import com.ash7sha.jhipster.application.JhipsterSampleApplicationApp;
+import com.ash7sha.Ash7sha.application.Ash7shaSampleApplicationApp;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see ExceptionTranslator
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = JhipsterSampleApplicationApp.class)
+@SpringBootTest(classes = Ash7shaSampleApplicationApp.class)
 public class ExceptionTranslatorIntTest {
 
     @Autowired

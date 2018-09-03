@@ -1,4 +1,4 @@
-package com.ash7sha.jhipster.application.web.rest.errors;
+package com.ash7sha.Ash7sha.application.web.rest.errors;
 
 import org.zalando.problem.AbstractThrowableProblem;
 

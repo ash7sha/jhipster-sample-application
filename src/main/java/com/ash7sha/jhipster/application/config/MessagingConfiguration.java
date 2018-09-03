@@ -1,4 +1,4 @@
-package com.ash7sha.jhipster.application.config;
+package com.ash7sha.Ash7sha.application.config;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -25,12 +25,12 @@ public class MessagingConfiguration {
      * This sends a test message at regular intervals.
      *
      * In order to see the test messages, you can use the Kafka command-line client:
-     * "./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic-jhipster --from-beginning".
+     * "./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic-Ash7sha --from-beginning".
      */
     @Bean
     @InboundChannelAdapter(value = Source.OUTPUT)
     public MessageSource<String> timerMessageSource() {
-        return () -> new GenericMessage<>("Test message from JHipster sent at " +
+        return () -> new GenericMessage<>("Test message from Ash7sha sent at " +
             new SimpleDateFormat().format(new Date()));
     }
 }

@@ -1,6 +1,6 @@
-package com.ash7sha.jhipster.application.client;
+package com.ash7sha.Ash7sha.application.client;
 
-import com.ash7sha.jhipster.application.security.SecurityUtils;
+import com.ash7sha.Ash7sha.application.security.SecurityUtils;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
 import org.springframework.stereotype.Component;

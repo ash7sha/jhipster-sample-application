@@ -1,6 +1,6 @@
-package com.ash7sha.jhipster.application.config;
+package com.ash7sha.Ash7sha.application.config;
 
-import io.github.jhipster.config.JHipsterProperties;
+import io.github.Ash7sha.config.Ash7shaProperties;
 
 import com.codahale.metrics.JmxReporter;
 import com.codahale.metrics.JvmAttributeGaugeSet;
@@ -39,12 +39,12 @@ public class MetricsConfiguration extends MetricsConfigurerAdapter {
 
     private HealthCheckRegistry healthCheckRegistry = new HealthCheckRegistry();
 
-    private final JHipsterProperties jHipsterProperties;
+    private final Ash7shaProperties Ash7shaProperties;
 
     private HikariDataSource hikariDataSource;
 
-    public MetricsConfiguration(JHipsterProperties jHipsterProperties) {
-        this.jHipsterProperties = jHipsterProperties;
+    public MetricsConfiguration(Ash7shaProperties Ash7shaProperties) {
+        this.Ash7shaProperties = Ash7shaProperties;
     }
 
     @Autowired(required = false)
@@ -75,16 +75,16 @@ public class MetricsConfiguration extends MetricsConfigurerAdapter {
         metricRegistry.register(PROP_METRIC_REG_JVM_ATTRIBUTE_SET, new JvmAttributeGaugeSet());
         if (hikariDataSource != null) {
             log.debug("Monitoring the datasource");
-            // remove the factory created by HikariDataSourceMetricsPostProcessor until JHipster migrate to Micrometer
+            // remove the factory created by HikariDataSourceMetricsPostProcessor until Ash7sha migrate to Micrometer
             hikariDataSource.setMetricsTrackerFactory(null);
             hikariDataSource.setMetricRegistry(metricRegistry);
         }
-        if (jHipsterProperties.getMetrics().getJmx().isEnabled()) {
+        if (Ash7shaProperties.getMetrics().getJmx().isEnabled()) {
             log.debug("Initializing Metrics JMX reporting");
             JmxReporter jmxReporter = JmxReporter.forRegistry(metricRegistry).build();
             jmxReporter.start();
         }
-        if (jHipsterProperties.getMetrics().getLogs().isEnabled()) {
+        if (Ash7shaProperties.getMetrics().getLogs().isEnabled()) {
             log.info("Initializing Metrics Log reporting");
             Marker metricsMarker = MarkerFactory.getMarker("metrics");
             final Slf4jReporter reporter = Slf4jReporter.forRegistry(metricRegistry)
@@ -93,7 +93,7 @@ public class MetricsConfiguration extends MetricsConfigurerAdapter {
                 .convertRatesTo(TimeUnit.SECONDS)
                 .convertDurationsTo(TimeUnit.MILLISECONDS)
                 .build();
-            reporter.start(jHipsterProperties.getMetrics().getLogs().getReportFrequency(), TimeUnit.SECONDS);
+            reporter.start(Ash7shaProperties.getMetrics().getLogs().getReportFrequency(), TimeUnit.SECONDS);
         }
     }
 }

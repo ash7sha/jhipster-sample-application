@@ -1,6 +1,6 @@
-package com.ash7sha.jhipster.application.security;
+package com.ash7sha.Ash7sha.application.security;
 
-import com.ash7sha.jhipster.application.config.Constants;
+import com.ash7sha.Ash7sha.application.config.Constants;
 
 import java.util.Optional;
 

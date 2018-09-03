@@ -1,6 +1,6 @@
-package com.ash7sha.jhipster.application.aop.logging;
+package com.ash7sha.Ash7sha.application.aop.logging;
 
-import io.github.jhipster.config.JHipsterConstants;
+import io.github.Ash7sha.config.Ash7shaConstants;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -43,9 +43,9 @@ public class LoggingAspect {
     /**
      * Pointcut that matches all Spring beans in the application's main packages.
      */
-    @Pointcut("within(com.ash7sha.jhipster.application.repository..*)"+
-        " || within(com.ash7sha.jhipster.application.service..*)"+
-        " || within(com.ash7sha.jhipster.application.web.rest..*)")
+    @Pointcut("within(com.ash7sha.Ash7sha.application.repository..*)"+
+        " || within(com.ash7sha.Ash7sha.application.service..*)"+
+        " || within(com.ash7sha.Ash7sha.application.web.rest..*)")
     public void applicationPackagePointcut() {
         // Method is empty as this is just a Pointcut, the implementations are in the advices.
     }
@@ -58,7 +58,7 @@ public class LoggingAspect {
      */
     @AfterThrowing(pointcut = "applicationPackagePointcut() && springBeanPointcut()", throwing = "e")
     public void logAfterThrowing(JoinPoint joinPoint, Throwable e) {
-        if (env.acceptsProfiles(JHipsterConstants.SPRING_PROFILE_DEVELOPMENT)) {
+        if (env.acceptsProfiles(Ash7shaConstants.SPRING_PROFILE_DEVELOPMENT)) {
             log.error("Exception in {}.{}() with cause = \'{}\' and exception = \'{}\'", joinPoint.getSignature().getDeclaringTypeName(),
                 joinPoint.getSignature().getName(), e.getCause() != null? e.getCause() : "NULL", e.getMessage(), e);
 

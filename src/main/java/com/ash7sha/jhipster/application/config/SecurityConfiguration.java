@@ -1,7 +1,7 @@
-package com.ash7sha.jhipster.application.config;
+package com.ash7sha.Ash7sha.application.config;
 
-import com.ash7sha.jhipster.application.security.*;
-import com.ash7sha.jhipster.application.security.jwt.*;
+import com.ash7sha.Ash7sha.application.security.*;
+import com.ash7sha.Ash7sha.application.security.jwt.*;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

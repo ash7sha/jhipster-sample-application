@@ -1,4 +1,4 @@
-package com.ash7sha.jhipster.application.config;
+package com.ash7sha.Ash7sha.application.config;
 
 import java.io.IOException;
 

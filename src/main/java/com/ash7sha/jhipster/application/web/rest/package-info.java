@@ -1,4 +1,4 @@
 /**
  * Spring MVC REST controllers.
  */
-package com.ash7sha.jhipster.application.web.rest;
+package com.ash7sha.Ash7sha.application.web.rest;

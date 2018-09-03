@@ -4,9 +4,9 @@
 <configuration scan="true">
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
-    <logger name="com.ash7sha.jhipster.application" level="INFO"/>
+    <logger name="com.ash7sha.Ash7sha.application" level="INFO"/>
 
-    <logger name="io.github.jhipster" level="WARN"/>
+    <logger name="io.github.Ash7sha" level="WARN"/>
 
     <logger name="javax.activation" level="WARN"/>
     <logger name="javax.mail" level="WARN"/>

@@ -1,4 +1,4 @@
-package com.ash7sha.jhipster.application.security.jwt;
+package com.ash7sha.Ash7sha.application.security.jwt;
 
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

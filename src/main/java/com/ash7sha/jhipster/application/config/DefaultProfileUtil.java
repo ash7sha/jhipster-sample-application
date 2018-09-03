@@ -1,6 +1,6 @@
-package com.ash7sha.jhipster.application.config;
+package com.ash7sha.Ash7sha.application.config;
 
-import io.github.jhipster.config.JHipsterConstants;
+import io.github.Ash7sha.config.Ash7shaConstants;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.core.env.Environment;
@@ -31,7 +31,7 @@ public final class DefaultProfileUtil {
         * This cannot be set in the <code>application.yml</code> file.
         * See https://github.com/spring-projects/spring-boot/issues/1219
         */
-        defProperties.put(SPRING_PROFILE_DEFAULT, JHipsterConstants.SPRING_PROFILE_DEVELOPMENT);
+        defProperties.put(SPRING_PROFILE_DEFAULT, Ash7shaConstants.SPRING_PROFILE_DEVELOPMENT);
         app.setDefaultProperties(defProperties);
     }
 

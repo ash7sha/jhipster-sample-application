@@ -1,25 +1,25 @@
 version: '2'
 services:
-    jhipstersampleapplication-app:
-        image: jhipstersampleapplication
+    Ash7shasampleapplication-app:
+        image: Ash7shasampleapplication
         environment:
             # - _JAVA_OPTIONS=-Xmx512m -Xms256m
             - SPRING_PROFILES_ACTIVE=prod,swagger
-            - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/eureka
-            - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@jhipster-registry:8761/config
-            - SPRING_DATASOURCE_URL=jdbc:mysql://jhipstersampleapplication-mysql:3306/jhipstersampleapplication?useUnicode=true&characterEncoding=utf8&useSSL=false
-            - JHIPSTER_SLEEP=30 # gives time for the JHipster Registry to boot before the application
-            - SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES=jhipstersampleapplication-elasticsearch:9300
+            - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://admin:$${Ash7sha.registry.password}@Ash7sha-registry:8761/eureka
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${Ash7sha.registry.password}@Ash7sha-registry:8761/config
+            - SPRING_DATASOURCE_URL=jdbc:mysql://Ash7shasampleapplication-mysql:3306/Ash7shasampleapplication?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - Ash7sha_SLEEP=30 # gives time for the Ash7sha Registry to boot before the application
+            - SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES=Ash7shasampleapplication-elasticsearch:9300
             - SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS=kafka
             - SPRING_CLOUD_STREAM_KAFKA_BINDER_ZK_NODES=zookeeper
-    jhipstersampleapplication-mysql:
+    Ash7shasampleapplication-mysql:
         extends:
             file: mysql.yml
-            service: jhipstersampleapplication-mysql
-    jhipstersampleapplication-elasticsearch:
+            service: Ash7shasampleapplication-mysql
+    Ash7shasampleapplication-elasticsearch:
         extends:
             file: elasticsearch.yml
-            service: jhipstersampleapplication-elasticsearch
+            service: Ash7shasampleapplication-elasticsearch
     kafka:
         extends:
             file: kafka.yml
@@ -30,10 +30,10 @@ services:
         extends:
             file: kafka.yml
             service: zookeeper
-    jhipster-registry:
+    Ash7sha-registry:
         extends:
-            file: jhipster-registry.yml
-            service: jhipster-registry
+            file: Ash7sha-registry.yml
+            service: Ash7sha-registry
         environment:
             - SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_TYPE=native
             - SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_SEARCH_LOCATIONS=file:./central-config/docker-config/

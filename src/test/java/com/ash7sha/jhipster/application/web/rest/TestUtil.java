@@ -1,4 +1,4 @@
-package com.ash7sha.jhipster.application.web.rest;
+package com.ash7sha.Ash7sha.application.web.rest;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -1,9 +1,9 @@
-package com.ash7sha.jhipster.application;
+package com.ash7sha.Ash7sha.application;
 
-import com.ash7sha.jhipster.application.config.ApplicationProperties;
-import com.ash7sha.jhipster.application.config.DefaultProfileUtil;
+import com.ash7sha.Ash7sha.application.config.ApplicationProperties;
+import com.ash7sha.Ash7sha.application.config.DefaultProfileUtil;
 
-import io.github.jhipster.config.JHipsterConstants;
+import io.github.Ash7sha.config.Ash7shaConstants;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,31 +23,31 @@ import java.util.Collection;
 @SpringBootApplication(exclude = DataSourcePoolMetricsAutoConfiguration.class)
 @EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
 @EnableDiscoveryClient
-public class JhipsterSampleApplicationApp {
+public class Ash7shaSampleApplicationApp {
 
-    private static final Logger log = LoggerFactory.getLogger(JhipsterSampleApplicationApp.class);
+    private static final Logger log = LoggerFactory.getLogger(Ash7shaSampleApplicationApp.class);
 
     private final Environment env;
 
-    public JhipsterSampleApplicationApp(Environment env) {
+    public Ash7shaSampleApplicationApp(Environment env) {
         this.env = env;
     }
 
     /**
-     * Initializes jhipsterSampleApplication.
+     * Initializes Ash7shaSampleApplication.
      * <p>
      * Spring profiles can be configured with a program argument --spring.profiles.active=your-active-profile
      * <p>
-     * You can find more information on how profiles work with JHipster on <a href="https://www.jhipster.tech/profiles/">https://www.jhipster.tech/profiles/</a>.
+     * You can find more information on how profiles work with Ash7sha on <a href="https://www.Ash7sha.tech/profiles/">https://www.Ash7sha.tech/profiles/</a>.
      */
     @PostConstruct
     public void initApplication() {
         Collection<String> activeProfiles = Arrays.asList(env.getActiveProfiles());
-        if (activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_DEVELOPMENT) && activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_PRODUCTION)) {
+        if (activeProfiles.contains(Ash7shaConstants.SPRING_PROFILE_DEVELOPMENT) && activeProfiles.contains(Ash7shaConstants.SPRING_PROFILE_PRODUCTION)) {
             log.error("You have misconfigured your application! It should not run " +
                 "with both the 'dev' and 'prod' profiles at the same time.");
         }
-        if (activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_DEVELOPMENT) && activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_CLOUD)) {
+        if (activeProfiles.contains(Ash7shaConstants.SPRING_PROFILE_DEVELOPMENT) && activeProfiles.contains(Ash7shaConstants.SPRING_PROFILE_CLOUD)) {
             log.error("You have misconfigured your application! It should not " +
                 "run with both the 'dev' and 'cloud' profiles at the same time.");
         }
@@ -59,7 +59,7 @@ public class JhipsterSampleApplicationApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(JhipsterSampleApplicationApp.class);
+        SpringApplication app = new SpringApplication(Ash7shaSampleApplicationApp.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         String protocol = "http";

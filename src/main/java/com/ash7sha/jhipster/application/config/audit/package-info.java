@@ -1,4 +1,4 @@
 /**
  * Audit specific code.
  */
-package com.ash7sha.jhipster.application.config.audit;
+package com.ash7sha.Ash7sha.application.config.audit;

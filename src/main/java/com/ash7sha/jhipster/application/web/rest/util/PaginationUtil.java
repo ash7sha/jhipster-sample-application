@@ -1,4 +1,4 @@
-package com.ash7sha.jhipster.application.web.rest.util;
+package com.ash7sha.Ash7sha.application.web.rest.util;
 
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpHeaders;

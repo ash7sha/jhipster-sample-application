@@ -1,7 +1,7 @@
 package com.ash7sha.Ash7sha.application.config;
 
-import io.github.Ash7sha.config.Ash7shaConstants;
-import io.github.Ash7sha.config.Ash7shaProperties;
+import io.github.jhipster.config.JHipsterConstants;
+import io.github.jhipster.config.JHipsterProperties;
 
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.servlet.InstrumentedFilter;
@@ -37,11 +37,11 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
 
     private final Environment env;
 
-    private final Ash7shaProperties Ash7shaProperties;
+    private final JHipsterProperties Ash7shaProperties;
 
     private MetricRegistry metricRegistry;
 
-    public WebConfigurer(Environment env, Ash7shaProperties Ash7shaProperties) {
+    public WebConfigurer(Environment env, JHipsterProperties Ash7shaProperties) {
 
         this.env = env;
         this.Ash7shaProperties = Ash7shaProperties;
@@ -70,7 +70,7 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
          * See the Ash7shaProperties class and your application-*.yml configuration files
          * for more information.
          */
-        if (Ash7shaProperties.getHttp().getVersion().equals(Ash7shaProperties.Http.Version.V_2_0) &&
+        if (Ash7shaProperties.getHttp().getVersion().equals(JHipsterProperties.Http.Version.V_2_0) &&
             server instanceof UndertowServletWebServerFactory) {
 
             ((UndertowServletWebServerFactory) server)

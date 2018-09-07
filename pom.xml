@@ -35,9 +35,9 @@
         <profile.swagger />
 
         <!-- Dependency versions -->
-        <Ash7sha-dependencies.version>2.0.15</Ash7sha-dependencies.version>
+        <jhipster-dependencies.version>2.0.15</jhipster-dependencies.version>
         <!-- The spring-boot version should match the one managed by
-        https://mvnrepository.com/artifact/io.github.Ash7sha/Ash7sha-dependencies/${Ash7sha-dependencies.version} -->
+        https://mvnrepository.com/artifact/io.github.Ash7sha/Ash7sha-dependencies/${jhipster-dependencies.version} -->
         <spring-boot.version>2.0.4.RELEASE</spring-boot.version>
         <!-- The hibernate version should match the one managed by
         https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies/${spring-boot.version} -->
@@ -98,9 +98,9 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.github.Ash7sha</groupId>
-                <artifactId>Ash7sha-dependencies</artifactId>
-                <version>${Ash7sha-dependencies.version}</version>
+                <groupId>io.github.jhipster</groupId>
+                <artifactId>jhipster-dependencies</artifactId>
+                <version>${jhipster-dependencies.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -110,8 +110,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>io.github.Ash7sha</groupId>
-            <artifactId>Ash7sha-framework</artifactId>
+            <groupId>io.github.jhipster</groupId>
+            <artifactId>jhipster-framework</artifactId>
         </dependency>
 
         <dependency>

@@ -3,7 +3,7 @@ package com.ash7sha.Ash7sha.application;
 import com.ash7sha.Ash7sha.application.config.ApplicationProperties;
 import com.ash7sha.Ash7sha.application.config.DefaultProfileUtil;
 
-import io.github.Ash7sha.config.Ash7shaConstants;
+import io.github.jhipster.config.JHipsterConstants;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,11 +43,11 @@ public class Ash7shaSampleApplicationApp {
     @PostConstruct
     public void initApplication() {
         Collection<String> activeProfiles = Arrays.asList(env.getActiveProfiles());
-        if (activeProfiles.contains(Ash7shaConstants.SPRING_PROFILE_DEVELOPMENT) && activeProfiles.contains(Ash7shaConstants.SPRING_PROFILE_PRODUCTION)) {
+        if (activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_DEVELOPMENT) && activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_PRODUCTION)) {
             log.error("You have misconfigured your application! It should not run " +
                 "with both the 'dev' and 'prod' profiles at the same time.");
         }
-        if (activeProfiles.contains(Ash7shaConstants.SPRING_PROFILE_DEVELOPMENT) && activeProfiles.contains(Ash7shaConstants.SPRING_PROFILE_CLOUD)) {
+        if (activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_DEVELOPMENT) && activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_CLOUD)) {
             log.error("You have misconfigured your application! It should not " +
                 "run with both the 'dev' and 'cloud' profiles at the same time.");
         }

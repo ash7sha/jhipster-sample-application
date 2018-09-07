@@ -1,7 +1,8 @@
 package com.ash7sha.Ash7sha.application.config;
 
-import io.github.Ash7sha.async.ExceptionHandlingAsyncTaskExecutor;
-import io.github.Ash7sha.config.Ash7shaProperties;
+import io.github.jhipster.*;
+import io.github.jhipster.async.ExceptionHandlingAsyncTaskExecutor;
+import io.github.jhipster.config.JHipsterProperties;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,9 +22,9 @@ public class AsyncConfiguration implements AsyncConfigurer {
 
     private final Logger log = LoggerFactory.getLogger(AsyncConfiguration.class);
 
-    private final Ash7shaProperties Ash7shaProperties;
+    private final JHipsterProperties Ash7shaProperties;
 
-    public AsyncConfiguration(Ash7shaProperties Ash7shaProperties) {
+    public AsyncConfiguration(JHipsterProperties Ash7shaProperties) {
         this.Ash7shaProperties = Ash7shaProperties;
     }
 

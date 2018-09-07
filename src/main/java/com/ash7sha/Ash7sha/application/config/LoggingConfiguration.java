@@ -3,7 +3,7 @@ package com.ash7sha.Ash7sha.application.config;
 import java.net.InetSocketAddress;
 import java.util.Iterator;
 
-import io.github.Ash7sha.config.Ash7shaProperties;
+import io.github.jhipster.config.JHipsterProperties;
 
 import ch.qos.logback.classic.AsyncAppender;
 import ch.qos.logback.classic.Level;
@@ -42,10 +42,10 @@ public class LoggingConfiguration {
 
     private final String version;
 
-    private final Ash7shaProperties Ash7shaProperties;
+    private final JHipsterProperties Ash7shaProperties;
 
     public LoggingConfiguration(@Value("${spring.application.name}") String appName, @Value("${server.port}") String serverPort,
-         @Value("${info.project.version:}") String version, Ash7shaProperties Ash7shaProperties) {
+         @Value("${info.project.version:}") String version, JHipsterProperties Ash7shaProperties) {
         this.appName = appName;
         this.serverPort = serverPort;
         this.version = version;

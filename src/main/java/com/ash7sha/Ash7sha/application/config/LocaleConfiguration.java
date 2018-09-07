@@ -1,6 +1,6 @@
 package com.ash7sha.Ash7sha.application.config;
 
-import io.github.Ash7sha.config.locale.AngularCookieLocaleResolver;
+import io.github.jhipster.config.locale.AngularCookieLocaleResolver;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

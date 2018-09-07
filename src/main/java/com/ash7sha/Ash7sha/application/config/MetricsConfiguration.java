@@ -1,6 +1,6 @@
 package com.ash7sha.Ash7sha.application.config;
 
-import io.github.Ash7sha.config.Ash7shaProperties;
+import io.github.jhipster.config.JHipsterProperties;
 
 import com.codahale.metrics.JmxReporter;
 import com.codahale.metrics.JvmAttributeGaugeSet;
@@ -39,11 +39,11 @@ public class MetricsConfiguration extends MetricsConfigurerAdapter {
 
     private HealthCheckRegistry healthCheckRegistry = new HealthCheckRegistry();
 
-    private final Ash7shaProperties Ash7shaProperties;
+    private final JHipsterProperties Ash7shaProperties;
 
     private HikariDataSource hikariDataSource;
 
-    public MetricsConfiguration(Ash7shaProperties Ash7shaProperties) {
+    public MetricsConfiguration(JHipsterProperties Ash7shaProperties) {
         this.Ash7shaProperties = Ash7shaProperties;
     }
 

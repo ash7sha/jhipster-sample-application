@@ -1,6 +1,6 @@
 package com.ash7sha.Ash7sha.application.config;
 
-import io.github.Ash7sha.config.Ash7shaConstants;
+import io.github.jhipster.config.JHipsterConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;

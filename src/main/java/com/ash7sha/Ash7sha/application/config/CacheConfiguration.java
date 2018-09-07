@@ -1,7 +1,7 @@
 package com.ash7sha.Ash7sha.application.config;
 
-import io.github.Ash7sha.config.Ash7shaConstants;
-import io.github.Ash7sha.config.Ash7shaProperties;
+import io.github.jhipster.config.JHipsterConstants;
+import io.github.jhipster.config.JHipsterProperties;
 
 import com.hazelcast.config.*;
 import com.hazelcast.core.HazelcastInstance;
@@ -61,7 +61,7 @@ public class CacheConfiguration {
     }
 
     @Bean
-    public HazelcastInstance hazelcastInstance(Ash7shaProperties Ash7shaProperties) {
+    public HazelcastInstance hazelcastInstance(JHipsterProperties Ash7shaProperties) {
         log.debug("Configuring Hazelcast");
         HazelcastInstance hazelCastInstance = Hazelcast.getHazelcastInstanceByName("Ash7shaSampleApplication");
         if (hazelCastInstance != null) {
@@ -79,7 +79,7 @@ public class CacheConfiguration {
             String serviceId = registration.getServiceId();
             log.debug("Configuring Hazelcast clustering for instanceId: {}", serviceId);
             // In development, everything goes through 127.0.0.1, with a different port
-            if (env.acceptsProfiles(Ash7shaConstants.SPRING_PROFILE_DEVELOPMENT)) {
+            if (env.acceptsProfiles(JHipsterConstants.SPRING_PROFILE_DEVELOPMENT)) {
                 log.debug("Application is running with the \"dev\" profile, Hazelcast " +
                           "cluster will only work with localhost instances");
 
@@ -109,7 +109,7 @@ public class CacheConfiguration {
         return Hazelcast.newHazelcastInstance(config);
     }
 
-    private ManagementCenterConfig initializeDefaultManagementCenterConfig(Ash7shaProperties Ash7shaProperties) {
+    private ManagementCenterConfig initializeDefaultManagementCenterConfig(JHipsterProperties Ash7shaProperties) {
         ManagementCenterConfig managementCenterConfig = new ManagementCenterConfig();
         managementCenterConfig.setEnabled(Ash7shaProperties.getCache().getHazelcast().getManagementCenter().isEnabled());
         managementCenterConfig.setUrl(Ash7shaProperties.getCache().getHazelcast().getManagementCenter().getUrl());
@@ -117,7 +117,7 @@ public class CacheConfiguration {
         return managementCenterConfig;
     }
 
-    private MapConfig initializeDefaultMapConfig(Ash7shaProperties Ash7shaProperties) {
+    private MapConfig initializeDefaultMapConfig(JHipsterProperties Ash7shaProperties) {
         MapConfig mapConfig = new MapConfig();
 
         /*
@@ -147,7 +147,7 @@ public class CacheConfiguration {
         return mapConfig;
     }
 
-    private MapConfig initializeDomainMapConfig(Ash7shaProperties Ash7shaProperties) {
+    private MapConfig initializeDomainMapConfig(JHipsterProperties Ash7shaProperties) {
         MapConfig mapConfig = new MapConfig();
         mapConfig.setTimeToLiveSeconds(Ash7shaProperties.getCache().getHazelcast().getTimeToLiveSeconds());
         return mapConfig;
